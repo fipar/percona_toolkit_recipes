@@ -7,17 +7,19 @@
 #+TITLE: Percona Toolkit Recipes
 #+AUTHOR: Marcos Albe, Fernando Ipar, Ryan Lowe
 
-* Intro
-What do we plan to cover in the presentation?
-** First slide
-** Another slide
-Another slide with more content. 
-#+BEGIN_LaTeX
-\begin{lstlisting}[language=shell]
-pt-slave-restart
-\end{lstlisting}
-
-#+END_LaTeX
+* Introduction
+** About us
+Who we are and what we do
+** About this talk
+- Source available at: https://github.com/fipar/percona_toolkit_recipes
+- Percona Toolkit: http://www.percona.com/software/percona-toolkit/
+- Individual scripts: http://www.percona.com/get/<script-name>
 * Problems
-** Problem 1
-** Problem 2
+** List of problems for review
+- Verifying the integrity of a replica
+- Making a replica consistent with its master
+- Identifying the best goals for query optimization
+- Upgrading MySQL
+- Troubleshoot intermitent problems
+- Altering a table without downtime
+* Recipes
