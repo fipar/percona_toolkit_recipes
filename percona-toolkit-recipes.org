@@ -1,0 +1,23 @@
+#+LaTeX_CLASS: beamer
+#+MACRO: BEAMERMODE presentation
+#+MACRO: BEAMERTHEME Boadilla
+#+MACRO: BEAMERCOLORTHEME lily
+#+MACRO: BEAMERSUBJECT RMRF
+#+MACRO: BEAMERINSTITUTE Percona Inc., Square Inc. 
+#+TITLE: Percona Toolkit Recipes
+#+AUTHOR: Marcos Albe, Fernando Ipar, Ryan Lowe
+
+* Intro
+What do we plan to cover in the presentation?
+** First slide
+** Another slide
+Another slide with more content. 
+#+BEGIN_LaTeX
+\begin{lstlisting}[language=shell]
+pt-slave-restart
+\end{lstlisting}
+
+#+END_LaTeX
+* Problems
+** Problem 1
+** Problem 2
