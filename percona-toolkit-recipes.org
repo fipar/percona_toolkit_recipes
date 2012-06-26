@@ -16,10 +16,25 @@ Who we are and what we do
 - Individual scripts: http://www.percona.com/get/<script-name>
 * Problems
 ** List of problems for review
-- Verifying the integrity of a replica
-- Making a replica consistent with its master
-- Identifying the best goals for query optimization
+- Making sure replication works as expected
+  - Verifying replicas
+  - Making them consistent again if needed
+- Performance optimization
+  - Identifying the best goals for our effort
+  - Sistematic review of 'bad' queries
 - Upgrading MySQL
-- Troubleshoot intermitent problems
-- Altering a table without downtime
+  - Having the odds on our side
+- Troubleshooting
+  - Investigating hard to diagnose problems
+- Operations
+  - Altering a table without downtime
+  - Archiving unused data
 * Recipes
+** Checksumming data across replicated servers
+** Resyncing inconsistent replicas
+** Analyzing logged traffic
+** Reviewing long running queries
+** Running queries against multiple versions
+** Finding the root cause
+** Online alter table
+** Archiving unused tables
