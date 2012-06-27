@@ -7,11 +7,23 @@
 #+TITLE: Percona Toolkit Recipes
 #+AUTHOR: Marcos Albe, Fernando Ipar, Ryan Lowe
 
+# Some comments and/or 'presenter notes' included. The slides are
+# intentionally minimal as this will be focused on short demos for
+# every recipe instead. 
+
 * Introduction
 ** About us
 Who we are and what we do
+# I want to keep text to the minimum necessary, so let's just present
+# ourselves verbally here. 
 ** Why should you be here?
 If you manage MySQL servers, *don't* reinvent the wheel :)
+# Percona toolkit provides properly tested and documented solutions to
+# problems that are frequently handled by home brewed scripts instead
+# (pt-archiver is a very good example). 
+# Don't reinvent the wheel, find and use a proper tool instead. The
+# recipes will provide a good starting point for you to build a
+# solution tailored to your specific version of the problem. 
 * Problems
 ** List of problems for review
 - Making sure replication works as expected
@@ -30,20 +42,36 @@ If you manage MySQL servers, *don't* reinvent the wheel :)
 * Recipes
 ** Checksumming data across replicated servers
 pt-table-checksum
+# TODO: Explain why replicas can go out of sync even if there are no
+# errors in the slave threads. 
+# TODO: short demo. 
 ** Resyncing inconsistent replicas
 pt-table-sync
+# TODO: Mention gotchas (like impossibility to throttle the process)
+# TODO: short demo
 ** Analyzing logged traffic
 pt-query-digest
+# TODO: explain why performance optimization efforts should be
+# focused, and how. 
+# TODO: short demo
 ** Reviewing long running queries
 pt-query-digest
+# TODO: short demo OR slides presenting review data
 ** Running queries against multiple versions
 pt-upgrade
+# TODO: Explain possible problems with an upgrade. Add relevant links
+# to Resources section in README.md
+# TODO: slides presenting highlights from a report
 ** Finding the root cause
 pt-stalk / pt-sift
+# TODO: Generate problem cases so we can create slides with good
+# capture data
 ** Online alter table
 pt-online-schema-change
+# TODO: short demo
 ** Archiving unused tables
 pt-archive
+# TODO: short demo
 * Resources
 ** Resources
 http://bit.ly/pt-recipes
