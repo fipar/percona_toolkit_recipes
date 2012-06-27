@@ -1,6 +1,6 @@
 #+LaTeX_CLASS: beamer
 #+MACRO: BEAMERMODE presentation
-#+MACRO: BEAMERTHEME Boadilla
+#+MACRO: BEAMERTHEME boxes
 #+MACRO: BEAMERCOLORTHEME lily
 #+MACRO: BEAMERSUBJECT RMRF
 #+MACRO: BEAMERINSTITUTE Percona Inc., Square Inc. 
@@ -10,10 +10,8 @@
 * Introduction
 ** About us
 Who we are and what we do
-** About this talk
-- Source available at: https://github.com/fipar/percona_toolkit_recipes
-- Percona Toolkit: http://www.percona.com/software/percona-toolkit/
-- Individual scripts: http://www.percona.com/get/<script-name>
+** Why should you be here?
+If you manage MySQL servers, *don't* reinvent the wheel :)
 * Problems
 ** List of problems for review
 - Making sure replication works as expected
@@ -31,10 +29,21 @@ Who we are and what we do
   - Archiving unused data
 * Recipes
 ** Checksumming data across replicated servers
+pt-table-checksum
 ** Resyncing inconsistent replicas
+pt-table-sync
 ** Analyzing logged traffic
+pt-query-digest
 ** Reviewing long running queries
+pt-query-digest
 ** Running queries against multiple versions
+pt-upgrade
 ** Finding the root cause
+pt-stalk / pt-sift
 ** Online alter table
+pt-online-schema-change
 ** Archiving unused tables
+pt-archive
+* Resources
+** Resources
+http://bit.ly/pt-recipes
