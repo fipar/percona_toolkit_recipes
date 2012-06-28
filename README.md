@@ -18,3 +18,6 @@ Resources:
 - Webinar -> Zero downtime schema changes: http://www.percona.com/webinars/2012-05-02-zero-downtime-schema-changes-in-mysql/
 - Webinar -> Verifying replication integrity: http://www.percona.com/webinars/2012-01-18-verifying-replication-integrity-with-percona-toolkit/
 - Webinar -> Diagnosing intermitten problems: http://www.percona.com/webinars/2011-09-06-diagnosing-intermittent-mysql-problems/
+- White Paper -> Goal driven performance optimization: http://www.percona.com/about-us/mysql-white-paper/goal-driven-performance-optimization/
+- Method R: http://method-r.com/faq/35-what-is-method-r
+- Blog post -> upgrading MySQL: http://www.mysqlperformanceblog.com/2010/01/05/upgrading-mysql/
