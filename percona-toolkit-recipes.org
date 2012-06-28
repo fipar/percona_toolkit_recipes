@@ -40,32 +40,54 @@ If you manage MySQL servers, *don't* reinvent the wheel :)
   - Altering a table without downtime
   - Archiving unused data
 * Recipes
-** Checksumming data across replicated servers
+** Verifying replicas
 pt-table-checksum
-# TODO: Explain why replicas can go out of sync even if there are no
-# errors in the slave threads. 
+** pt-table-checksum
+Many things can break MySQL replication
+- Writing to a replica
+- Nondeterministic SQL and SBR
+- Difference in storage engines
+- Temporary tables
+- Filtering
+- ...
+** pt-table-checksum
+Recipe demo: how to verify a three node setup
 # TODO: short demo. 
-** Resyncing inconsistent replicas
+** Making a replica consistent with its master
 pt-table-sync
+** pt-table-sync
+Recipe demo: resyncing
 # TODO: Mention gotchas (like impossibility to throttle the process)
 # TODO: short demo
-** Analyzing logged traffic
-pt-query-digest
-# TODO: explain why performance optimization efforts should be
-# focused, and how. 
-# TODO: short demo
-** Reviewing long running queries
+** Finding good candidates for query optimization
+How? pt-query-digest
+
+Why? *Amdahl's law*
+# The performance enhancement possible with a given improvement is
+# limited by the fraction of the execution time that the improved
+# feature is used. 
+** pt-query-digest
+Recipe: Analyzing a query log looking for candidates for performance optimization
+# TODO: slides presenting relevant parts from a report
+** Systematic query reviews
 pt-query-digest
 # TODO: short demo OR slides presenting review data
-** Running queries against multiple versions
+** Safe(r) upgrades
 pt-upgrade
-# TODO: Explain possible problems with an upgrade. Add relevant links
-# to Resources section in README.md
+** pt-upgrade
+2 ways to upgrade MySQL: 
+- Reckless
+- Safe
+- http://bit.ly/upgrading-mysql
 # TODO: slides presenting highlights from a report
 ** Finding the root cause
 pt-stalk / pt-sift
 # TODO: Generate problem cases so we can create slides with good
 # capture data
+** pt-stalk
+Why?
+
+"Everything freezes at random times"
 ** Online alter table
 pt-online-schema-change
 # TODO: short demo
