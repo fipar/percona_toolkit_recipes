@@ -6,6 +6,7 @@
 #+MACRO: BEAMERINSTITUTE Percona Inc., Square Inc. 
 #+TITLE: Percona Toolkit Recipes
 #+AUTHOR: Marcos Albe, Fernando Ipar, Ryan Lowe
+#+OPTIONS: ^:nil
 
 # Some comments and/or 'presenter notes' included. The slides are
 # intentionally minimal as this will be focused on short demos for
@@ -88,6 +89,40 @@ pt-stalk / pt-sift
 Why?
 
 "Everything freezes at random times"
+** pt-stalk : triggered captures
+Triggers based on 
+- show global status
+- show full processlist
+- user defined function
+** pt-stalk : trigger examples
+pt-stalk --function processlist --variable Command --match Sleep
+--threshold 155 --cycles 0
+# Trigger if we're using a thread pool and more threads are connected
+# and sleeping than the size of the pol plus some room for a few
+# direct connections. 
+** pt-stalk : trigger examples
+pt-stalk --threshold 40 --cycles 6
+# Trigger if more than 40 threads are running for more than 5
+# consecutive checks
+** pt-stalk : trigger examples
+pt-stalk --function check_loadavg.sh --threshold 12
+# triggers if load avg for the last minute is more than 12.x for 5
+# consecutive checks or more
+** pt-stalk : function trigger example
+function trg_plugin() 
+
+{
+
+   uptime |sed 's/.*load average: //g;s/\..*//g'
+
+}
+** pt-stalk : making sense of a capture
+Now ... Where do we start?
+
+pt-sift!
+** pt-sift
+#+CAPTION: Sample pt-sift summary
+[[./img/pt-sift.png]]
 ** Online alter table
 pt-online-schema-change
 # TODO: short demo
