@@ -126,8 +126,11 @@ pt-sift!
 ** Online alter table
 pt-online-schema-change
 # TODO: short demo
-** Archiving unused tables
+** Archiving unused tables and/or old data
 pt-archive
+# TODO: short demo
+** Delayed Replication Slave
+pt-slave-delay
 # TODO: short demo
 * Resources
 ** Resources
