@@ -15,17 +15,17 @@
 * Introduction
 
 ** About us
-Fernando Ipar - Senior Consultant @Percona
-Marcus Albe - Support Engineer @Percona
-Ryan Lowe - Production Engineer @Square
+- Fernando Ipar - Senior Consultant @Percona
+- Marcus Albe - Support Engineer @Percona
+- Ryan Lowe - Production Engineer @Square
 
 ** Presentation Overview
 
-What is Percona Toolkit & Why should you be here?
-Classes of problems solved by Percona Toolkit
-Targeted recipes for specific problems
-Further resources & Recommended reading
-Q&A
+- What is Percona Toolkit & Why should you be here?
+- Classes of problems solved by Percona Toolkit
+- Targeted recipes for specific problems
+- Further resources & Recommended reading
+- Q&A
 
 ** What is Percona Toolkit?
 
@@ -46,11 +46,11 @@ Don't re-invent the wheel
 
 ** Problems
 
-Replication
-Performance
-Upgrading
-Troubleshooting
-Schema Changes
+- Replication
+- Performance
+- Upgrading
+- Troubleshooting
+- Schema Changes
 
 # Percona Toolkit helps to solve a wide variety of problems that MySQL DBAs encounter
 # on a regular basis.  The problems include Replication issues, Performance problems,
@@ -59,18 +59,16 @@ Schema Changes
 # have 45 minutes, so this is what we'll cover today.
 
 * Recipes
-
 ** Replication
-
 ** Problem 1: Master and Slave MAY have different data
 
-Statements unsafe for replication (CURRENT_USER(), etc)
-Incorrect failover procedures
-Developers writing directly to the slave
-Rolling upgrades
-Storage Engines
-Temporary Tables
-Replication Filters
+- Statements unsafe for replication (CURRENT_USER(), etc)
+- Incorrect failover procedures
+- Developers writing directly to the slave
+- Rolling upgrades
+- Storage Engines
+- Temporary Tables
+- Replication Filters
 
 ** Solution 1: pt-table-checksum
 
@@ -88,7 +86,6 @@ Recipe demo: resyncing
 # TODO: short demo
 
 ** Problem 3: SQL Injection + Long Restore Times
-
 ** Solution 3: pt-slave-delay
 
 # TODO: short demo
