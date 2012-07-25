@@ -15,9 +15,9 @@
 * Introduction
 
 ** About us
-Fernando Ipar - Senior Consultant @Percona
-Marcus Albe - Support Engineer @Percona
-Ryan Lowe - Production Engineer @Square
+- Fernando Ipar - Senior Consultant @Percona
+- Marcus Albe - Support Engineer @Percona
+- Ryan Lowe - Production Engineer @Square
 
 ** Presentation Overview
 
@@ -51,6 +51,7 @@ Performance
 Upgrading
 Troubleshooting
 Schema Changes
+Workload Changes
 
 # Percona Toolkit helps to solve a wide variety of problems that MySQL DBAs encounter
 # on a regular basis.  The problems include Replication issues, Performance problems,
@@ -93,32 +94,51 @@ Recipe demo: resyncing
 
 # TODO: short demo
 
-** Finding good candidates for query optimization
-How? pt-query-digest
+** Performance
 
-Why? *Amdahl's law*
+** Problem 4: Slow Queries
+
+Amdahl's Law 
+
 # The performance enhancement possible with a given improvement is
 # limited by the fraction of the execution time that the improved
 # feature is used. 
-** pt-query-digest
+
+** Solution 4: pt-query-digest
+
 Recipe: Analyzing a query log looking for candidates for performance optimization
 # TODO: slides presenting relevant parts from a report
-** Systematic query reviews
-pt-query-digest
+
+** Problem 5: Rapid Development & Constantly Changing Workload
+
+** Solution 5: pt-query-digest
+
 # TODO: short demo OR slides presenting review data
-** Safe(r) upgrades
-pt-upgrade
-** pt-upgrade
-2 ways to upgrade MySQL: 
+
+** Upgrading
+
+** Problem 6: Upgrading MySQL can break my app
+
+** Solution 6: pt-upgrade
+
+2 ways to upgrade MySQL:
 - Reckless
 - Safe
 - http://bit.ly/upgrading-mysql
 # TODO: slides presenting highlights from a report
-** Finding the root cause
-pt-stalk / pt-sift
+
+** Troubleshooting
+
+** Problem 7: Root Cause Analysis
+
+** Solution 7: pt-stalk & pt-sift
 # TODO: Generate problem cases so we can create slides with good
 # capture data
-** pt-stalk
+
+** Problem 8: Intermittent non-repeatable problems
+
+** Solution 8: pt-stalk, pt-collect, pt-sift
+
 Why?
 
 "Everything freezes at random times"
@@ -156,12 +176,19 @@ pt-sift!
 ** pt-sift
 #+CAPTION: Sample pt-sift summary
 [[./img/pt-sift.png]]
-** Online alter table
-pt-online-schema-change
+
+** Problem 9: Blocking ALTER Statements
+
+** Solution 9: pt-online-alter-table
 # TODO: short demo
-** Archiving unused tables and/or old data
-pt-archive
+
+** Workload Changes
+
+** Problem 10: Un-used old data
+
+** Solution 10: pt-archive
 # TODO: short demo
+
 * Resources
 ** Resources
 http://bit.ly/pt-recipes
