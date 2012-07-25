@@ -3,63 +3,96 @@
 #+MACRO: BEAMERTHEME boxes
 #+MACRO: BEAMERCOLORTHEME lily
 #+MACRO: BEAMERSUBJECT RMRF
-#+MACRO: BEAMERINSTITUTE Percona Inc., Square Inc. 
+#+MACRO: BEAMERINSTITUTE Percona Inc., Square Inc.
 #+TITLE: Percona Toolkit Recipes
 #+AUTHOR: Marcos Albe, Fernando Ipar, Ryan Lowe
 #+OPTIONS: ^:nil
 
 # Some comments and/or 'presenter notes' included. The slides are
 # intentionally minimal as this will be focused on short demos for
-# every recipe instead. 
+# every recipe instead
 
 * Introduction
+
 ** About us
-Who we are and what we do
-# I want to keep text to the minimum necessary, so let's just present
-# ourselves verbally here. 
+Fernando Ipar - Senior Consultant @Percona
+Marcus Albe - Support Engineer @Percona
+Ryan Lowe - Production Engineer @Square
+
+** Presentation Overview
+
+What is Percona Toolkit & Why should you be here?
+Classes of problems solved by Percona Toolkit
+Targeted recipes for specific problems
+Further resources & Recommended reading
+Q&A
+
+** What is Percona Toolkit?
+
+Percona Toolkit is a collection of advanced command-line tools to perform a variety of MySQL and system tasks that are too tedious and/or complex to perform manually.
+
+# Can do a quick poll here to see who uses it, who *wants* to use it, etc...
+
 ** Why should you be here?
-If you manage MySQL servers, *don't* reinvent the wheel :)
-# Percona toolkit provides properly tested and documented solutions to
-# problems that are frequently handled by home brewed scripts instead
-# (pt-archiver is a very good example). 
-# Don't reinvent the wheel, find and use a proper tool instead. The
-# recipes will provide a good starting point for you to build a
-# solution tailored to your specific version of the problem. 
-* Problems
-** List of problems for review
-- Making sure replication works as expected
-  - Verifying replicas
-  - Making them consistent again if needed
-- Performance optimization
-  - Identifying the best goals for our effort
-  - Sistematic review of 'bad' queries
-- Upgrading MySQL
-  - Having the odds on our side
-- Troubleshooting
-  - Investigating hard to diagnose problems
-- Operations
-  - Altering a table without downtime
-  - Archiving unused data
+
+Don't re-invent the wheel
+
+# Most of us have a very large collection of scripts that we've created over the years, right?
+# How many of you have unit tests for those scripts?
+# How many of you have validated that those scripts work in 4.1, 5.0, 5.1, 5.5, Percona-Server, MariaDB, and Drizzle?
+# How many of you have tens-of-thousands of implementations of those scripts to catch undocumented edge-cases?
+# How many of you have a full time team of developers working on those scripts?
+# Right. This is why you should be here.  Make your life easier and re-use existing tools.
+
+** Problems
+
+Replication
+Performance
+Upgrading
+Troubleshooting
+Schema Changes
+
+# Percona Toolkit helps to solve a wide variety of problems that MySQL DBAs encounter
+# on a regular basis.  The problems include Replication issues, Performance problems,
+# Upgrade safety, Troubleshooting and investigationg hard-to-diagnose problems, and
+# Schema changes for very large tables. This isn't an exhaustive list, but we only
+# have 45 minutes, so this is what we'll cover today.
+
 * Recipes
-** Verifying replicas
-pt-table-checksum
-** pt-table-checksum
-Many things can break MySQL replication
-- Writing to a replica
-- Nondeterministic SQL and SBR
-- Difference in storage engines
-- Temporary tables
-- Filtering
-- ...
-** pt-table-checksum
+
+** Replication
+
+** Problem 1: Master and Slave MAY have different data
+
+Statements unsafe for replication (CURRENT_USER(), etc)
+Incorrect failover procedures
+Developers writing directly to the slave
+Rolling upgrades
+Storage Engines
+Temporary Tables
+Replication Filters
+
+** Solution 1: pt-table-checksum
+
 Recipe demo: how to verify a three node setup
 # TODO: short demo. 
-** Making a replica consistent with its master
-pt-table-sync
-** pt-table-sync
+
+** Problem 2: Master and Slave DO have different data
+
+Same reasons as Problem 1, but validated via Solution 1
+
+** Solution 2: pt-table-sync
+
 Recipe demo: resyncing
 # TODO: Mention gotchas (like impossibility to throttle the process)
 # TODO: short demo
+
+** Problem 3: SQL Injection + Long Restore Times
+
+** Solution 3: pt-slave-delay
+
+# TODO: short demo
+
 ** Finding good candidates for query optimization
 How? pt-query-digest
 
@@ -129,9 +162,8 @@ pt-online-schema-change
 ** Archiving unused tables and/or old data
 pt-archive
 # TODO: short demo
-** Delayed Replication Slave
-pt-slave-delay
-# TODO: short demo
 * Resources
 ** Resources
 http://bit.ly/pt-recipes
+* Q&A
+
