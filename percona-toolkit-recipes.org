@@ -15,8 +15,8 @@
 * Introduction
 
 ** About us
-- Fernando Ipar - Senior Consultant @Percona
 - Marcus Albe - Support Engineer @Percona
+- Fernando Ipar - Senior Consultant @Percona
 - Ryan Lowe - Production Engineer @Square
 
 ** Presentation Overview
@@ -44,21 +44,21 @@ Don't re-invent the wheel
 # How many of you have a full time team of developers working on those scripts?
 # Right. This is why you should be here.  Make your life easier and re-use existing tools.
 
-** Problems
+* Problems
 
 - Replication
 - Performance
 - Upgrading
 - Troubleshooting
 - Schema Changes
-- Workload Changes
+# - Workload Changes <- not sure what this is, or if we'll have time
+# for the pt-archive demo. removing from now. 
 
 # Percona Toolkit helps to solve a wide variety of problems that MySQL DBAs encounter
 # on a regular basis.  The problems include Replication issues, Performance problems,
 # Upgrade safety, Troubleshooting and investigationg hard-to-diagnose problems, and
 # Schema changes for very large tables. This isn't an exhaustive list, but we only
-# have 45 minutes, so this is what we'll cover today.
-
+# have 45 minutes, so this is what we'll cover today
 * Recipes
 ** Replication
 ** Problem 1: Master and Slave MAY have different data
@@ -91,8 +91,6 @@ Recipe demo: resyncing
 
 # TODO: short demo
 
-** Performance
-
 ** Problem 4: Slow Queries
 
 Amdahl's Law 
@@ -104,7 +102,7 @@ Amdahl's Law
 ** Solution 4: pt-query-digest
 
 Recipe: Analyzing a query log looking for candidates for performance optimization
-# TODO: slides presenting relevant parts from a report
+# TODO: demo
 
 ** Problem 5: Rapid Development & Constantly Changing Workload
 
@@ -134,7 +132,7 @@ Recipe: Analyzing a query log looking for candidates for performance optimizatio
 
 ** Problem 8: Intermittent non-repeatable problems
 
-** Solution 8: pt-stalk, pt-collect, pt-sift
+** Solution 8: pt-stalk, pt-sift
 
 Why?
 
@@ -177,13 +175,6 @@ pt-sift!
 ** Problem 9: Blocking ALTER Statements
 
 ** Solution 9: pt-online-alter-table
-# TODO: short demo
-
-** Workload Changes
-
-** Problem 10: Un-used old data
-
-** Solution 10: pt-archive
 # TODO: short demo
 
 * Resources
