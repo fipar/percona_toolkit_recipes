@@ -107,9 +107,11 @@ Recipe: Analyzing a query log looking for candidates for performance optimizatio
 ** Problem 5: Rapid Development & Constantly Changing Workload
 
 ** Solution 5: pt-query-digest
-
-# TODO: short demo OR slides presenting review data
-
+#+CAPTION: Sample query ranking from a pt-query-digest report
+[[./img/pt-query-digest-ranking.png]]
+** Solution 5: pt-query-digest
+#+CAPTION: Sample query detail from a pt-query-digest report
+[[./img/pt-query-digest-zoom-on-query.png]]
 ** Upgrading
 
 ** Problem 6: Upgrading MySQL can break my app
