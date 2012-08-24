@@ -215,6 +215,17 @@ TODO: slides showing basic usage and a report
 
 !
 
+![](./img/pt-upgrade-query-1-differences-summary.png "")
+
+!
+
+![](./img/pt-upgrade-query-1-response-time-detail.png "")
+
+!
+
+![](./img/pt-upgrade-query-1-response-time-summary.png "")
+
+!
 
 Troubleshooting
 ===
