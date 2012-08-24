@@ -72,9 +72,9 @@ Don't re-invent the wheel
 - Replication Filters
 
 ** Solution 1: pt-table-checksum
-
-Recipe demo: how to verify a three node setup
-# TODO: short demo. 
+: pt-table-checksum --tables dbname.tbname \
+:   h=master-host,u=user,p=password
+# TODO: short demo. (verifying a 3 node setup)
 
 ** Problem 2: Master and Slave DO have different data
 
