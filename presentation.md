@@ -209,9 +209,15 @@ Solution 5: pt-upgrade
 - Safe
 - http://bit.ly/upgrading-mysql
 
-<!--- 
-TODO: slides showing basic usage and a report
--->
+!
+
+	pt-upgrade h=host1 h=host2 --query \
+		"select a from b" --temp-database test
+
+!
+
+	pt-upgrade h=host1 h=host2 \ 
+		--temp-database test queries.txt
 
 !
 
