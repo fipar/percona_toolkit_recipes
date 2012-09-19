@@ -127,8 +127,7 @@ Solution 2: pt-table-sync
 Demo: resyncing two instances
 
 <!---
-TODO: Mention gotchas (like impossibility to throttle the process)
-TODO: short demo
+TODO: pt-table-sync demo
 -->
 
 !
@@ -136,12 +135,20 @@ TODO: short demo
 Problem 3: SQL Injection + long restore times
 ===
 
+![](http://imgs.xkcd.com/comics/exploits_of_a_mom.png "") 
+
+	(http://xkcd.com/327/ is one reason why a slave is **not** a backup)
+
 !
 
 Solution 3: pt-slave-delay
 ===
 
 Demo: restoring from a delayed slave
+
+<!---
+TODO: pt-table-sync demo
+-->
 
 !
 
@@ -167,7 +174,7 @@ Solution 4: pt-query-digest
 ===
 Demo: Analyzing a query log looking for candidates for performance optimization
 <!---
-TODO: demo
+TODO: pt-query-digest demo (?)
 -->
 !
 
@@ -185,7 +192,6 @@ Solution 5: pt-query-digest
 
 Solution 5: pt-query-digest
 ===
-
 
 ![](./img/pt-query-digest-zoom-on-query.png "")
 
@@ -250,11 +256,6 @@ Why?
 
 "Everything freezes at random times"
 
-<!---
-TODO: Generate problem cases so we can create slides with good
-capture data
--->
-
 !
 
 pt-stalk: triggered captures
@@ -294,6 +295,7 @@ consecutive checks
 -->
 
 !
+
 	pt-stalk --function check_loadavg.sh --threshold 12
 <!---
 triggers if load avg for the last minute is more than 12.x for 5
